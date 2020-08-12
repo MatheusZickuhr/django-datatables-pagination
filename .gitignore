@@ -1,2 +1,4 @@
 *.pyc
 /dt_pagination/migrations/
+/dist/
+MANIFEST
