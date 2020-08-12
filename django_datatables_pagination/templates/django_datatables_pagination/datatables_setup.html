@@ -7,7 +7,7 @@
             url: '',
             type: "post",
             error: () => {
-                console.log("aconteceu algum erro inesperado!");
+                console.log("someting went wrong!");
             },
             data: {
                 csrfmiddlewaretoken: '{{ csrf_token }}'
@@ -23,18 +23,6 @@
         responsive: true,
         paging: true,
         ordering: false,
-        info: false,
-        language: {
-            "decimal": "",
-            "emptyTable": "Não foram encontrados dados",
-            "loadingRecords": "Carregando...",
-            "processing": "Processando...",
-            "search": "Pesquisar:",
-            "zeroRecords": "Nenhum registro encontrado",
-            "paginate": {
-                "previous": "Anterior",
-                "next": "Próxima"
-            }
-        }
+        info: false
     });
 </script>

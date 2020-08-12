@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+django_datatables_pagination/__init__.py
+django_datatables_pagination/admin.py
+django_datatables_pagination/apps.py
+django_datatables_pagination/models.py
+django_datatables_pagination/tests.py
+django_datatables_pagination/views.py
+django_datatables_pagination.egg-info/PKG-INFO
+django_datatables_pagination.egg-info/SOURCES.txt
+django_datatables_pagination.egg-info/dependency_links.txt
+django_datatables_pagination.egg-info/requires.txt
+django_datatables_pagination.egg-info/top_level.txt
