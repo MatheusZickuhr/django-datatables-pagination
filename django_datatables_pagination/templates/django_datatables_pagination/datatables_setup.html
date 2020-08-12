@@ -1,0 +1,40 @@
+<script>
+
+    $('.datatable').DataTable({
+        "processing": true,
+        "serverSide": true,
+        "ajax": {
+            url: '',
+            type: "post",
+            error: () => {
+                console.log("aconteceu algum erro inesperado!");
+            },
+            data: {
+                csrfmiddlewaretoken: '{{ csrf_token }}'
+            }
+        },
+        "deferRender": true,
+        "columns": [
+            null,
+            null,
+            {className: "options-column"}
+        ],
+        pageLength: 10,
+        responsive: true,
+        paging: true,
+        ordering: false,
+        info: false,
+        language: {
+            "decimal": "",
+            "emptyTable": "Não foram encontrados dados",
+            "loadingRecords": "Carregando...",
+            "processing": "Processando...",
+            "search": "Pesquisar:",
+            "zeroRecords": "Nenhum registro encontrado",
+            "paginate": {
+                "previous": "Anterior",
+                "next": "Próxima"
+            }
+        }
+    });
+</script>
