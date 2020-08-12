@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
     name='django-datatables-pagination',
     packages=['django_datatables_pagination'],
-    version='0.1',
+    version='0.1.1',
     license='MIT',
     description='A Django ListView integration with datatables library.',
     author='Matheus Zickuhr',
