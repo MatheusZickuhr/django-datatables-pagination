@@ -1,6 +1,7 @@
 from django.http import JsonResponse
 from django.template.loader import render_to_string
 from django.views.generic import ListView
+from django.contrib.auth.context_processors import PermWrapper
 
 
 def split_html_by_tds(html):
@@ -35,7 +36,11 @@ class DtPaginatedListView(ListView):
         queryset_page = queryset[start: start + length]
 
         for obj in queryset_page:
-            html = render_to_string(self.tr_template, context={'object': obj, 'user': self.request.user})
+            html = render_to_string(
+                self.tr_template, context={
+                    'object': obj,
+                    'user': self.request.user,
+                    'perms': PermWrapper(self.request.user)})
             tds = split_html_by_tds(html)
             data.append(tds)
 
