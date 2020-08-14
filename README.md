@@ -1,3 +1,8 @@
+#javascript requirements
+
+- datatables
+- jquery
+
 # how to install
 
 ```
