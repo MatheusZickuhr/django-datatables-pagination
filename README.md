@@ -1,4 +1,4 @@
-#javascript requirements
+# javascript requirements
 
 - datatables
 - jquery
