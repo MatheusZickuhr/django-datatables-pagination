@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: django-datatables-pagination
-Version: 0.1
+Version: 0.1.5
 Summary: A Django ListView integration with datatables library.
 Home-page: https://github.com/MatheusZickuhr/django-datatables-pagination
 Author: Matheus Zickuhr
