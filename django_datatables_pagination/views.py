@@ -5,7 +5,18 @@ from django.contrib.auth.context_processors import PermWrapper
 
 
 def split_html_by_tds(html):
-    return [td.replace('</td>', '').strip() for td in html.split('<td>')][1:]
+    """get a peace of html containing tds and returns the
+        content of each td as a elemenent in a list"""
+
+    splited_html = html.split('</td>')
+    result = []
+    for html_chunck in splited_html:
+        striped_html_chunk = html_chunck.strip()
+        if striped_html_chunk:
+            arrow_right_index = striped_html_chunk.find('>')
+            result.append(striped_html_chunk[arrow_right_index + 1:])
+
+    return result
 
 
 def filter_by_search_term(queryset, fields, search_term):
